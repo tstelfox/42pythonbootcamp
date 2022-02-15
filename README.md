@@ -6,7 +6,7 @@
 </p>
 
 <h1 align="center">
-  Bootcamp Python
+  I FORKED THIS AND DON'T OWN IT
 </h1>
 <h3 align="center">
   One week to learn Python for Machine Learning :rocket:
