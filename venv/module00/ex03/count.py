@@ -1,12 +1,21 @@
 import string
+import sys
 
-def text_analyser(input):
-    print("Full length is: ", len(input))
+def text_analyser(stuff=None, *args):
+    if len(args) != 1:
+        print("ERROR")
+        exit()
+    if stuff is None:
+        print("Enter some shit")
+        print(">>> ", end="")
+        # stuff = sys.stdin.readline()
+        stuff = input()
+    print("Full length is: ", len(stuff))
     _upper = 0
     _lower = 0
     _punk = 0
     _space = 0
-    for character in input:
+    for character in stuff:
         if character.isupper():
             _upper += 1
         elif character.islower():
