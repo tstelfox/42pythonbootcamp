@@ -1,10 +1,10 @@
 import string
 import sys
 
-def text_analyser(stuff=None, *args):
-    if len(args) != 1:
+def text_analyser(stuff=None, nope=None):
+    if nope:
         print("ERROR")
-        exit()
+        return
     if stuff is None:
         print("Enter some shit")
         print(">>> ", end="")
