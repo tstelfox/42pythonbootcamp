@@ -23,6 +23,7 @@ if __name__ == '__main__':
     listy = range(200)
     ret = 0
     for elem in ft_progress(listy):
+        # print(elem)
         ret += elem
         time.sleep(0.01)
     print()
