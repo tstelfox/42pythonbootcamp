@@ -12,6 +12,7 @@ class Recipe:
         self.ingredients = ingredients
         self.description = description
         self.recipe_type = recipe_type
+
     def __str__(self):
         txt = "The recipe for " + self.name + "\nDifficulty " + ("* " * self.cooking_lvl)
         txt += "\nRequires " + str(self.cooking_time) + " mins"
