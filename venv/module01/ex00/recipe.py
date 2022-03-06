@@ -4,7 +4,7 @@ class Recipe:
         if cooking_lvl > 5 or cooking_lvl < 1:
             print("Cooking level of ", cooking_lvl, "is incorrect")
             exit()
-        if (cooking_time < 0):
+        if cooking_time < 0:
             print("No negative cooking time")
             exit()
         self.cooking_lvl = cooking_lvl
@@ -13,9 +13,14 @@ class Recipe:
         self.description = description
         self.recipe_type = recipe_type
     def __str__(self):
-        print("The recipe for" + name + "")
+        txt = "The recipe for " + self.name + "\nDifficulty " + ("* " * self.cooking_lvl)
+        txt += "\nRequires " + str(self.cooking_time) + " mins"
+        txt += "\nIngredients: " + ', '.join(map(str, self.ingredients))
+        txt += "\n\"" + self.description + "\""
+        txt += "\nPortata: " + self.recipe_type
+        return txt
 
 
-Mio = Recipe("Carbonara", 2, 25, ["uova", "guanciale", "pecorino romano"], "Bona in culo", "primo")
+Mio = Recipe("Carbonara", 2, 25, ["uova", "guanciale", "pecorino romano"], "Gustoso e semplice piatto tipico Romano", "primo")
 
-print(Mio.ingredients)
+print(Mio)
